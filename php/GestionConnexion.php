@@ -40,11 +40,12 @@
             }
         }
 		if($erreurs==""){
-            $membres[$id]["panier"] = array_merge( $membres[$id]["panier"],$_SESSION["InfoMembre"]["panier"]);
+            $_SESSION["InfoMembre"]["panier"] = array_merge($_SESSION["InfoMembre"]["panier"],$membres[$id]["panier"]);
+            $membres[$id]["panier"] = $_SESSION["InfoMembre"]["panier"];
             $_SESSION["estConnecte"]=true;
             $_SESSION["InfoMembre"] = $membres[$id];
             
-            
+            file_put_contents('Membres.data', serialize($membres));
             echo '<script> window.location.href="index.php" </script>';
         }
 

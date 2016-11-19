@@ -50,6 +50,14 @@
     }
     
     /******************************************************************************************************/
+    
+    function afficherPanier()
+    {
+        if(file_exists("php/Panier.php"))
+        {
+            include("php/Panier.php");
+        }
+    }
     function afficherConnexion()
     {
         if(file_exists("connexion.php"))
@@ -100,7 +108,9 @@
                 /**************************************************************************************************************/
             }
         ?>
-        <button type="button" value ="Panier"><i class="material-icons">add_shopping_cart</i> Panier</button>
+        <!--/********************************************************************************************************************/-->
+        <button type="button" value ="Panier" onClick="window.location.href='index.php?choix=panier';"><i class="material-icons">add_shopping_cart</i> Panier</button>
+        <!--/*******************************************************************************************************************/-->
     </header>
 
     <nav>
@@ -122,6 +132,9 @@
                     break;
                 case "compte" : 
                     afficherCompte();
+                    break;
+                case "panier" : 
+                    afficherPanier();
                     break;
                 default : 
                     afficherIngredients($choix,$Hierarchie,$Recettes);
