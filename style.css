@@ -1,0 +1,229 @@
+:root {
+    --header-background-color: #806666;
+    --header-color : white;
+}
+
+@font-face {
+    font-family: Flowers kingtom;
+    src: url(font/Flowers Kingdom.ttf);
+}
+
+@font-face {
+    font-family: pac font;
+    src: url(font/PAC-FONT.TTF);
+}
+
+body{
+    margin:0;
+    padding: 0;
+
+    @font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+    background-image: url("Images/drink.jpg");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+html{
+    display: block; 
+}
+header {
+    background-color: var( --header-background-color);
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 1px rgba(128, 102, 102, 0.3);
+}
+
+header > p{
+    display: inline;
+    font-size: 1.5em;
+    font-weight: 200;
+    font-family: pac font;
+    color : var(--header-color) ;
+    margin: 25px;
+    float: left;
+}
+
+header > p > a{
+	text-decoration: none;
+	color :inherit
+}
+
+header > button[type=button]{
+    display: : inline;
+    float : right;
+    border: none;
+    padding: 25px 25px;
+    background-color: var( --header-background-color);
+    border-bottom: 3px solid var( --header-background-color);
+    color :var(--header-color);
+    transition-duration: 0.3s;
+}
+
+header > button[type=button]:hover{
+    border-bottom: 3px solid var(--header-color);
+}
+
+header > button[type=button]:focus{
+    border-bottom: 3px solid var(--header-color);
+    outline-color : var(--header-color);
+}
+
+header button[type=button] i{
+    color: var(--header-color);
+    vertical-align: -25%;
+}
+main{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section{
+    margin : 20px;
+    padding : 20px;
+    background-color: aliceblue;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+.btn_ingre{
+    margin: 10px;
+    padding : 5px;
+    width: 150px;
+    height: 40px;
+    overflow: hidden;
+    border: none;
+    background-color: var( --header-background-color);
+    transition-duration: 0.4s;
+    color: var(--header-color);
+}
+
+.btn_ingre:hover{
+    background-color: var( --header-background-color);
+    background-color: white;
+    color: black;
+}
+
+.div_btn_ingre{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.align-center{
+    text-align: center;
+}
+
+.Proposition{
+    display: inline-block;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    opacity: 0.9;
+    position: relative;
+}
+
+.img_Coktail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+    top:0px;
+    left:0px;
+}
+
+.Proposition h3{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    color:#FFFFFF;
+    font-size: 36px;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+
+footer hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.Proposition a{
+    text-decoration: none;
+}
+
+.Proposition h3:hover{
+    border : 1px solid white;
+}
+
+footer{
+    color : azure;
+    background-color : black;
+    text-align: center;
+    min-height: 200px;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: -5px 0px 7px 4px rgba(0, 0, 0, 0.4);
+}
+
+footer a{
+    color: azure;
+    text-decoration: none;
+    margin: 20px;
+}
+
+footer p{
+    font-weight: bold;
+    font-style: italic;
+    margin: 20px;
+}
+
+footer ul{
+    display: inline-block;
+    list-style: none;
+}
+
+footer ul li{
+     font-size: 0.9em;
+}
+
+footer ul li a:hover, footer ul li a:hover{
+    text-decoration: underline;
+}
+
+footer ul li:first-child{
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+footer hr{
+    margin-left: 25%;
+    margin-right: 25%;
+    color: darkgray;
+}
+
+.recette img{
+    float: left;
+    max-height: 300px;
+}
+.recette h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.recette ul{
+    list-style-type: circle;
+    color: black;
+    float: left;
+}
+
+.recette p{
+    clear: both;
+    padding-top : 10px;
+    margin: 10px;
+}
