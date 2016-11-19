@@ -30,6 +30,17 @@
 	else{
     	$_SESSION['nav']=$_SESSION['nav']." > ".$choix;
 	}
+    /********************************************************************************************/
+    function estConnecte(){
+        if(isset($_SESSION["estConnecte"])){
+            return  $_SESSION["estConnecte"];
+        }
+        else{
+            return false;
+        }
+        return false;
+    }
+    /********************************************************************************************/
     function afficherFormulaire()
     {
         if(file_exists("Formulaire.php"))
@@ -37,23 +48,33 @@
             include("Formulaire.php");
         }
     }
-
+    
     /******************************************************************************************************/
     function afficherConnexion()
     {
         if(file_exists("connexion.php"))
         {
-            include("connexion.php");
+            if(!estConnecte()){
+                include("connexion.php");
+            }
+            else{
+                afficherCompte();
+            }
         }
     }
     function afficherCompte()
     {
         if(file_exists("php/compte.php"))
         {
-            include("php/compte.php");
+            if(estConnecte()){
+                include("php/compte.php");
+            }
+            else{
+                afficherConnexion();
+            }
         }
     }
-    /*******************************************************************************************************************************/
+    /*********************************************************************************************************************/
 ?>
 <!DOCTYPE HTML>
 <HTML>
