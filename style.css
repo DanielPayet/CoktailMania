@@ -227,3 +227,7 @@ footer hr{
     padding-top : 10px;
     margin: 10px;
 }
+
+fieldset{
+    border-radius: 8px;
+}
