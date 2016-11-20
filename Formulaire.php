@@ -26,38 +26,33 @@
 	
 	Vous êtes :  
 	
-	<span class="<?php if(!$zoneSexe){echo "erreur";} ?>">
-		<input type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/> une femme 	
-		<input type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/> un homme
+	<span class="<?php if(!$zoneSexe){echo "erreur";} ?>"><br>
+		<input class="check" type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/> une femme<br>	
+		<input class="check" type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/> un homme
 	</span>
 	
-	<br />
-	
-    Pseudo : 
-	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /><br /> 	
+    <label for="pseudo">Pseudo</label>
+	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /> 	
     
-    Nom :    
-	<input type="text" name="nom" value="<?php if(isset($nom)){echo $nom;} if(!$zoneNom){echo '"class="erreur';} ?>" /><br />   
+    <label for="nom">Nom</label>   
+	<input type="text" name="nom" value="<?php if(isset($nom)){echo $nom;} if(!$zoneNom){echo '"class="erreur';} ?>" />
     
-    Prénom : 
-	<input type="text" name="prenom" value="<?php if(isset($prenom)){echo $prenom;}  if(!$zonePrenom){echo '"class="erreur';} ?>" /><br /> 	
+    <label for="prenom">Prénom</label>
+	<input type="text" name="prenom" value="<?php if(isset($prenom)){echo $prenom;}  if(!$zonePrenom){echo '"class="erreur';} ?>" />
     
-    Mot de passe : 
-	<input type="password" name="mdp1" value="<?php if(isset($mdp1)){echo $mdp1;}  if(!$zoneMdp1){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <label for="mdp1">Mot de passe</label> 
+	<input type="password" name="mdp1" value="<?php if(isset($mdp1)){echo $mdp1;}  if(!$zoneMdp1){echo '"class="erreur';} ?>" required="required" /> 
     
-    Retaper le mot de passe : 
-	<input type="password" name="mdp2" value="<?php if(isset($mdp2)){echo $mdp2;}  if(!$zoneMdp2){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <label for="mdp2">Retaper le mot de passe</label>
+	<input type="password" name="mdp2" value="<?php if(isset($mdp2)){echo $mdp2;}  if(!$zoneMdp2){echo '"class="erreur';} ?>" required="required" />
     
-    Adresse mail : 
-	<input type="email" name="email" value="<?php if(isset($email)){echo $email;}  if(!$zoneEmail){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <label for="email">E-mail</label>
+	<input type="email" name="email" value="<?php if(isset($email)){echo $email;}  if(!$zoneEmail){echo '"class="erreur';} ?>" required="required" />
     
-    Date de naissance : 
-	<input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/> (jj-mm-aaaa)<br /> 	
+    <label for="naissance">Date de naissance</label>
+	<input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/> (jj-mm-aaaa)	
     
 </fieldset>
-
-
-	<br />
 <input type="submit" name="submit" value="Valider" />
          
 </form>

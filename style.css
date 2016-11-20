@@ -229,7 +229,23 @@ footer hr{
 }
 
 fieldset{
-    border-radius: 8px;
-    color : red;
-    border:1px solid green;
+    border: none;
+    text-align:center;
+}
+fieldset label{
+    display: block;
+}
+fieldset input{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset input:not(.check){
+    display: block;
+    transition-duration:  1s;
+    width: 40%;
+}
+
+fieldset input:not(.check):focus{
+    width:50%;
 }
