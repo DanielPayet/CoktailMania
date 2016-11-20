@@ -84,9 +84,10 @@ main{
 section{
     margin : 20px;
     padding : 20px;
-    background-color: aliceblue;
-    opacity: 0.9;
+    background-color: white;
+    opacity: 1;
     overflow: hidden;
+    border-radius: 7px;
 }
 
 .btn_ingre{
@@ -228,24 +229,77 @@ footer hr{
     margin: 10px;
 }
 
+.titre{
+    margin: 10px -20px;
+    background-color:  #806666;
+    color: white;
+    padding : 10px;
+}
 fieldset{
     border: none;
     text-align:center;
+    opacity: 1;
 }
-fieldset label{
+fieldset label:not(.sexe){
     display: block;
-}
-fieldset input{
-    margin-left: auto;
-    margin-right: auto;
 }
 
-fieldset input:not(.check){
+fieldset label:after{
+    content: " :";
+}
+
+fieldset input{
+    margin : 10px auto;
+    text-align: center;
+}
+
+
+.erreur{
     display: block;
     transition-duration:  1s;
-    width: 40%;
+    width: 30%;
+    border:none;
+    outline: none;
+    padding: 5px;
+    border: 1px solid red;
+    background-color: #d2eafc;
+}
+.check{
+    margin: 5px;
+}
+
+fieldset input:not(.check):not(.erreur){
+    display: block;
+    transition-duration:  1s;
+    width: 30%;
+    border:none;
+    border-bottom: 1px solid #0080ff;
+    outline: none;
+    padding: 5px;
+    background-color: #806666;
 }
 
 fieldset input:not(.check):focus{
-    width:50%;
+    width:40%;
+    outline: none;
+}
+
+input[type="submit"]{
+    display: block;
+    cursor:pointer;
+    margin: 10px auto;
+    padding : 10px 20px;
+    background-color: #806666;
+    outline: none;
+    border : none;
+    transition-duration: .5s;
+}
+
+input[type="submit"]:active{
+    background-color: #dbb7b7;
+}
+
+
+input[type="submit"]:hover{
+    background-color: #987b7b;
 }

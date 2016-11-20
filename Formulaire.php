@@ -8,29 +8,13 @@
       <title>Vos données</title>
 	  <meta charset="utf-8" />
 </head>
-
-<style>
-	.erreur{
-		background-color : red;
-	}
-</style>
-
 <body>
 
-<h1>Vos données</h1>
+<h1 class="titre">Inscription</h1>
 
 <form method="post" action="#" >
 <fieldset>
-
-    <legend>Informations personnelles</legend>
-	
-	Vous êtes :  
-	
-	<span class="<?php if(!$zoneSexe){echo "erreur";} ?>"><br>
-		<input class="check" type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/> une femme<br>	
-		<input class="check" type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/> un homme
-	</span>
-	
+		
     <label for="pseudo">Pseudo</label>
 	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /> 	
     
@@ -49,8 +33,10 @@
     <label for="email">E-mail</label>
 	<input type="email" name="email" value="<?php if(isset($email)){echo $email;}  if(!$zoneEmail){echo '"class="erreur';} ?>" required="required" />
     
-    <label for="naissance">Date de naissance</label>
-	<input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/> (jj-mm-aaaa)	
+    <label for="naissance">Date de naissance (jj-mm-aaaa)</label>
+	<input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/>
+		<input class="check <?php if(!$zoneSexe){echo "erreur";} ?>" type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/>femme
+		<input class="check <?php if(!$zoneSexe){echo "erreur";} ?>" type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/>homme
     
 </fieldset>
 <input type="submit" name="submit" value="Valider" />
