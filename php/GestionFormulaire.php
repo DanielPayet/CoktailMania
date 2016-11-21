@@ -112,7 +112,7 @@
         $prenom = "Prenom";
         $pseudo = "Pseudo";
         $mdp1 = "Mot de passe";
-        $mdp2 = "Comfirmer mot de passe";
+        $mdp2 = "Confirmer mot de passe";
         $email = "Votre e-mail";
         $naissance = "Votre date de naissance";
     }

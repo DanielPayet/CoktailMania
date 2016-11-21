@@ -249,6 +249,7 @@ fieldset label:after{
 }
 
 fieldset input{
+    margin : 10px auto;
     text-align: center;
     border-radius : 5px;
     color: white;
@@ -259,8 +260,8 @@ fieldset input{
 }
 
 .erreur{
-    /*transition-duration:  1s;*/
-    width: 100%;
+    transition-duration:  1s;
+    width: 90%;
     border:none;
     outline: none;
     padding: 5px;
@@ -271,25 +272,18 @@ fieldset input{
     margin: 5px;
 }
 
-fieldset input:not(.check):not(.erreur):not(.nom){
-    /*transition-duration:  1s;*/
-    width: 100%;
+fieldset input:not(.check):not(.erreur){
+    transition-duration:  1s;
+    width: 90%;
     border:none;
     border-bottom: 2px solid #0080ff;
     outline: none;
     padding: 5px;
     background-color: #806666;
 }
-.nom{
-    width: 44%;
-    border:none;
-    border-bottom: 2px solid #0080ff;
-    outline: none;
-    padding: 5px;
-    background-color: #806666;
-}
+
 fieldset input:not(.check):focus{
-    /*width:35%;*/
+    width:100%;
     outline: none;
 }
 
