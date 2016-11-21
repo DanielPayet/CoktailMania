@@ -238,10 +238,10 @@ footer hr{
 fieldset{
     border: none;
     text-align:center;
-    opacity: 1;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 fieldset label:not(.sexe){
-    display: block;
 }
 
 fieldset label:after{
@@ -249,38 +249,47 @@ fieldset label:after{
 }
 
 fieldset input{
-    margin : 10px auto;
     text-align: center;
+    border-radius : 5px;
+    color: white;
 }
 
+.block{
+    margin : 10px auto;
+}
 
 .erreur{
-    display: block;
-    transition-duration:  1s;
-    width: 30%;
+    /*transition-duration:  1s;*/
+    width: 100%;
     border:none;
     outline: none;
     padding: 5px;
-    border: 1px solid red;
-    background-color: #d2eafc;
+    border: 2px solid red;
+    background-color: #806666;
 }
 .check{
     margin: 5px;
 }
 
-fieldset input:not(.check):not(.erreur){
-    display: block;
-    transition-duration:  1s;
-    width: 30%;
+fieldset input:not(.check):not(.erreur):not(.nom){
+    /*transition-duration:  1s;*/
+    width: 100%;
     border:none;
-    border-bottom: 1px solid #0080ff;
+    border-bottom: 2px solid #0080ff;
     outline: none;
     padding: 5px;
     background-color: #806666;
 }
-
+.nom{
+    width: 44%;
+    border:none;
+    border-bottom: 2px solid #0080ff;
+    outline: none;
+    padding: 5px;
+    background-color: #806666;
+}
 fieldset input:not(.check):focus{
-    width:40%;
+    /*width:35%;*/
     outline: none;
 }
 
@@ -293,6 +302,7 @@ input[type="submit"]{
     outline: none;
     border : none;
     transition-duration: .5s;
+    color :white;
 }
 
 input[type="submit"]:active{

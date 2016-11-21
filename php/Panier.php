@@ -13,7 +13,7 @@
 </style>
 
 <body>
-<h1>Vos recettes de coktail favoris</h1>
+<h1 class="titre">Vos recettes de coktail favoris</h1>
     <a href="php/addElement.php">Ajoutez Morito (BETA)</a>
     <ul>
         <?php
