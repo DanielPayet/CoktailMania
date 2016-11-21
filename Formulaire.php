@@ -8,56 +8,46 @@
       <title>Vos données</title>
 	  <meta charset="utf-8" />
 </head>
-
-<style>
-	.erreur{
-		background-color : red;
-	}
-</style>
-
 <body>
 
-<h1>Vos données</h1>
+<h1 class="titre">Inscription</h1>
 
 <form method="post" action="#" >
 <fieldset>
-
-    <legend>Informations personnelles</legend>
-	
-	Vous êtes :  
-	
-	<span class="<?php if(!$zoneSexe){echo "erreur";} ?>">
-		<input type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/> une femme 	
-		<input type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/> un homme
-	</span>
-	
-	<br />
-	
-    Pseudo : 
-	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /><br /> 	
+		
+   <div class="block">  
+	   <input class ="nom" type="text" name="nom" value="<?php if(isset($nom)){echo $nom;} if(!$zoneNom){echo '"class="erreur';} ?>" />
     
-    Nom :    
-	<input type="text" name="nom" value="<?php if(isset($nom)){echo $nom;} if(!$zoneNom){echo '"class="erreur';} ?>" /><br />   
+	   <input class="nom" type="text" name="prenom" value="<?php if(isset($prenom)){echo $prenom;}  if(!$zonePrenom){echo '"class="erreur';} ?>" />
     
-    Prénom : 
-	<input type="text" name="prenom" value="<?php if(isset($prenom)){echo $prenom;}  if(!$zonePrenom){echo '"class="erreur';} ?>" /><br /> 	
+    </div>
     
-    Mot de passe : 
-	<input type="password" name="mdp1" value="<?php if(isset($mdp1)){echo $mdp1;}  if(!$zoneMdp1){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <div class="block">
+        <input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /> 	
+    </div>
     
-    Retaper le mot de passe : 
-	<input type="password" name="mdp2" value="<?php if(isset($mdp2)){echo $mdp2;}  if(!$zoneMdp2){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <div class="block">
+        <input type="password" name="mdp1" value="<?php if(isset($mdp1)){echo $mdp1;}  if(!$zoneMdp1){echo '"class="erreur';} ?>" required="required" /> 
+    </div>
     
-    Adresse mail : 
-	<input type="email" name="email" value="<?php if(isset($email)){echo $email;}  if(!$zoneEmail){echo '"class="erreur';} ?>" required="required" /><br /> 
+    <div class="block">
+        <input type="password" name="mdp2" value="<?php if(isset($mdp2)){echo $mdp2;}  if(!$zoneMdp2){echo '"class="erreur';} ?>" required="required" />
+    </div>
+        
+    <div class="block">
+        <input type="email" name="email" value="<?php if(isset($email)){echo $email;}  if(!$zoneEmail){echo '"class="erreur';} ?>" required="required" />
+    </div>
     
-    Date de naissance : 
-	<input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/> (jj-mm-aaaa)<br /> 	
+    <div class="block">
+        <input type="text" name="naissance" value="<?php if(isset($naissance)){echo $naissance;}  if(!$zoneDate){echo '"class="erreur';}?>"/>
+    </div>
+    
+    <div class="block">
+		<input class="check <?php if(!$zoneSexe){echo "erreur";} ?>" type="radio" name="sexe" value="f" <?php if((isset($sexe))&&($sexe=='f')){echo "checked";} ?>/>femme
+		<input class="check <?php if(!$zoneSexe){echo "erreur";} ?>" type="radio" name="sexe" value="h" <?php if((isset($sexe))&&($sexe=='h')){echo "checked";} ?>/>homme
+    </div>
     
 </fieldset>
-
-
-	<br />
 <input type="submit" name="submit" value="Valider" />
          
 </form>

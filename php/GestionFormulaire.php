@@ -10,16 +10,16 @@
     $zoneMdp1 = TRUE;
     $zoneMdp2 = TRUE;
 	$affichage ="";
-	
-    if(!file_exists("Membres.data"))
-    {
-        file_put_contents('Membres.data', serialize(array()));
-    }
-    $buffer = file_get_contents('Membres.data');
-
-    $membres = unserialize($buffer);
 
 	if(isset($submit)){
+        if(!file_exists("Membres.data"))
+        {
+            file_put_contents('Membres.data', serialize(array()));
+            chmod("/somedir/somefile", 0755);
+        }
+        $buffer = file_get_contents('Membres.data');
+        $membres = unserialize($buffer);
+        
 		if(!(isset($sexe))||($sexe!='h'&&$sexe!='f'))
 		{
 			$erreurs = $erreurs."<li>Sexe</li>";
@@ -107,4 +107,13 @@
             echo '<script> window.location.href="index.php" </script>';
         }
 	}
+    else{
+        $nom = "Nom";
+        $prenom = "Prenom";
+        $pseudo = "Pseudo";
+        $mdp1 = "Mot de passe";
+        $mdp2 = "Comfirmer mot de passe";
+        $email = "Votre e-mail";
+        $naissance = "Votre date de naissance";
+    }
 ?>

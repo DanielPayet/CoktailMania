@@ -13,7 +13,7 @@
 </style>
 
 <body>
-<h1>Votre compte</h1>
+<h1 class="titre">Votre compte</h1>
     <ul>
         <li><?php echo $_SESSION["InfoMembre"]["nom"];?></li>
         <li><?php echo $_SESSION["InfoMembre"]["prenom"];?></li>

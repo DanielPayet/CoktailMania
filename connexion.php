@@ -15,7 +15,7 @@
 
 <body>
 
-<h1>Connexion</h1>
+<h1 class="titre">Connexion</h1>
 
 <form method="post" action="#" >
 <fieldset>

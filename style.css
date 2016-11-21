@@ -84,9 +84,10 @@ main{
 section{
     margin : 20px;
     padding : 20px;
-    background-color: aliceblue;
-    opacity: 0.9;
+    background-color: white;
+    opacity: 1;
     overflow: hidden;
+    border-radius: 7px;
 }
 
 .btn_ingre{
@@ -226,4 +227,89 @@ footer hr{
     clear: both;
     padding-top : 10px;
     margin: 10px;
+}
+
+.titre{
+    margin: 10px -20px;
+    background-color:  #806666;
+    color: white;
+    padding : 10px;
+}
+fieldset{
+    border: none;
+    text-align:center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+fieldset label:not(.sexe){
+}
+
+fieldset label:after{
+    content: " :";
+}
+
+fieldset input{
+    text-align: center;
+    border-radius : 5px;
+    color: white;
+}
+
+.block{
+    margin : 10px auto;
+}
+
+.erreur{
+    /*transition-duration:  1s;*/
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 5px;
+    border: 2px solid red;
+    background-color: #806666;
+}
+.check{
+    margin: 5px;
+}
+
+fieldset input:not(.check):not(.erreur):not(.nom){
+    /*transition-duration:  1s;*/
+    width: 100%;
+    border:none;
+    border-bottom: 2px solid #0080ff;
+    outline: none;
+    padding: 5px;
+    background-color: #806666;
+}
+.nom{
+    width: 44%;
+    border:none;
+    border-bottom: 2px solid #0080ff;
+    outline: none;
+    padding: 5px;
+    background-color: #806666;
+}
+fieldset input:not(.check):focus{
+    /*width:35%;*/
+    outline: none;
+}
+
+input[type="submit"]{
+    display: block;
+    cursor:pointer;
+    margin: 10px auto;
+    padding : 10px 20px;
+    background-color: #806666;
+    outline: none;
+    border : none;
+    transition-duration: .5s;
+    color :white;
+}
+
+input[type="submit"]:active{
+    background-color: #dbb7b7;
+}
+
+
+input[type="submit"]:hover{
+    background-color: #987b7b;
 }
