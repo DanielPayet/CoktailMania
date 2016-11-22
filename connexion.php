@@ -19,12 +19,9 @@
 
 <form method="post" action="#" >
 <fieldset>
-	
-    Pseudo : 
-	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" /><br />	
+	<input type="text" name="pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}  if(!$zonePseudo){echo '"class="erreur';} ?>" required="required" />
     
-    Mot de passe : 
-	<input type="password" name="mdp1" value="<?php if(isset($mdp)){echo $mdp1;}  if(!$zoneMdp){echo '"class="erreur';} ?>" required="required" /><br /> 
+	<input type="password" name="mdp" value="<?php if(isset($mdp)){echo $mdp;}  if(!$zoneMdp){echo '"class="erreur';} ?>" required="required" onclick="if(this.type=='text'){this.type='password';this.value='';}" onblur="if(this.type=='password' && this.value==''){this.type='text';this.value='Votre mot de passe';}" />
     	
     
 </fieldset>

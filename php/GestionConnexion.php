@@ -34,7 +34,7 @@
             $zonePseudo = FALSE;
         }
         else{
-            if(!($membres[$id]["password"] == md5($mdp1))){
+            if(!($membres[$id]["password"] == md5($mdp))){
                 $erreurs = $erreurs."<li>Mot de passe</li>";
                 $zoneMdp = FALSE;
             }
@@ -49,5 +49,8 @@
             echo '<script> window.location.href="index.php" </script>';
         }
 
-	}
+	}else{
+        $pseudo = "Votre Pseudo";
+        $mdp = "Votre mot de passe";
+    }
 ?>
